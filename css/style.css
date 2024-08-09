@@ -1,0 +1,744 @@
+/* start contact  */
+:root {
+  --main-color: #0d6efd;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact i {
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  .contact .container > div {
+    flex-direction: column;
+  }
+  .contact .container > div i,
+  .contact .container > div .txt {
+    margin-left: 0 !important;
+  }
+}
+/* end contact  */
+
+/* start navbar  */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}
+
+nav .content .logo {
+  position: relative;
+}
+nav .content .logo h1 {
+  font-size: 35px;
+}
+nav .content .logo i {
+  font-size: 60px;
+  color: var(--main-color);
+  position: absolute;
+  top: -10px;
+  left: 25%;
+  z-index: -1;
+}
+nav .content .links ul {
+  list-style: none;
+}
+
+nav .content .links ul li {
+  cursor: pointer;
+}
+
+nav .content .links ul .has-arrow {
+  position: relative;
+}
+nav .content .links ul .has-arrow::after {
+  content: "";
+  border: 5px solid;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: -18px;
+}
+nav .content .list {
+  position: relative;
+}
+nav .content .list i {
+  cursor: pointer;
+}
+nav .content .list .content {
+  position: absolute;
+  right: -5px;
+  top: 85px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+}
+nav .content .list .content::after {
+  content: "";
+  position: absolute;
+
+  top: -30px;
+  right: 20px;
+
+  border: 15px solid;
+  border-color: transparent transparent rgb(255, 255, 255);
+}
+nav .content .list .content ul {
+  list-style: none;
+}
+nav .content .list .content ul li {
+  cursor: pointer;
+  color: gray;
+}
+nav .content .list .content ul li:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+@media (max-width: 991px) {
+  nav .content .links {
+    display: none !important;
+  }
+  nav .content .list {
+    display: block !important;
+  }
+}
+/* end navbar  */
+
+/* start carousel  */
+.carousel .carousel-indicators {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 0 !important;
+  right: -30% !important;
+}
+.carousel .carousel-indicators button {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+.carousel .carousel-indicators button.active {
+  background-color: transparent !important;
+  border: 1px solid white;
+}
+/* end carousel  */
+/* start about  */
+.about {
+  background-color: #eee;
+}
+.about h1 span {
+  color: var(--main-color);
+  position: relative;
+}
+.about h1 span::before {
+  content: "____";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  color: rgb(196, 196, 250);
+}
+.about h1 .last::before {
+  left: 0;
+}
+
+.about .cards .card {
+  background-color: white;
+  color: gray;
+  transform: translate(15%, 15%);
+}
+@media (max-width: 767px) {
+  .about .cards .card {
+    transform: translate(0, 0);
+  }
+}
+.about .cards .card .div .icon {
+  width: 10%;
+}
+.about .cards .card .div .txt {
+  font-size: 12px;
+  border-left: 1px solid gray;
+}
+.about .cards .card .div .txt h2 {
+  font-size: 18px;
+}
+.about .cards .img {
+  overflow: hidden;
+  border-radius: 5px;
+}
+.about .cards .img img {
+  height: 470px;
+}
+.about .cards .learn {
+  color: gray;
+}
+.about .cards .learn p {
+  font-size: 18px;
+}
+.about .cards .learn button {
+  background-color: var(--main-color);
+  color: white;
+  border: 0;
+  border-radius: 15px;
+}
+/* end about  */
+/* start achieve  */
+.achieve .content .icon {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  color: var(--main-color);
+  box-shadow: 1px 1px 5px gray;
+  border-radius: 2px;
+}
+.achieve .content .text h2 {
+  transition: 2s;
+}
+/* end achieve  */
+/* start services  */
+.services {
+  background-image: url("../imgs/images.jpeg");
+}
+.services .text {
+  color: white;
+}
+
+.services h1 span {
+  color: var(--main-color);
+  position: relative;
+}
+.services h1 span::before {
+  content: "____";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  color: rgb(196, 196, 250);
+}
+.services h1 .last::before {
+  left: 0;
+}
+.services .box {
+  border: 1px solid #a7a7a7;
+  border-radius: 10px;
+  color: white;
+  height: 138px;
+  overflow: hidden;
+  position: relative;
+}
+
+.services .box i {
+  font-size: 30px;
+}
+.services .box > h2 {
+  font-size: 20px;
+}
+
+.services .box .hidden {
+  background-color: white;
+  position: absolute;
+  color: black;
+  transition: 0.5s;
+  top: 100%;
+  left: 0;
+  border-radius: 10px;
+}
+.services .box:hover .hidden {
+  top: 0;
+}
+.services .box .hidden h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.services .box .hidden p {
+  font-size: 12px;
+}
+.services .box .hidden button {
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 15px;
+}
+/* end services  */
+/* start our work  */
+.work .header h1 span {
+  color: var(--main-color);
+  position: relative;
+}
+.work .header h1 span::before {
+  content: "____";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  color: rgb(196, 196, 250);
+}
+.work .header h1 .last::before {
+  left: 0;
+}
+.work .header p {
+  color: #a7a7a7;
+}
+.work .header ul {
+  list-style: none;
+}
+.work .header ul li.active {
+  color: var(--main-color);
+}
+
+.work .divs .div .txt {
+  background-color: rgba(50, 150, 255, 0.6);
+  color: white;
+  width: 90%;
+  transition: 0.5s;
+  transform: translatey(-130%) scale(0);
+}
+
+.work .div:hover .txt {
+  transform: translatey(-130%) scale(1);
+}
+
+/* end our work  */
+
+/* start team  */
+.team {
+  background-color: #eee;
+}
+.team h1 span {
+  color: var(--main-color);
+  position: relative;
+}
+.team h1 span::before {
+  content: "____";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  color: rgb(196, 196, 250);
+}
+.team h1 .last::before {
+  left: 0;
+}
+.team .persons .person {
+  overflow: hidden;
+  height: 355px;
+  position: relative;
+}
+
+.team .persons .person .txt {
+  background-color: white;
+  position: absolute;
+  left: 15px;
+  box-shadow: 2px 2px 15px rgb(46, 44, 44);
+  border-radius: 5px;
+  transition: 0.5s;
+  bottom: -45%;
+}
+.team .persons .person:hover .txt {
+  bottom: 0;
+}
+.team .persons .person .txt h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.team .persons .person .txt span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.team .persons .person .txt p {
+  width: 80%;
+}
+.team .persons .person .txt .icons {
+  background-color: var(--main-color);
+  color: white;
+  width: 90%;
+  border-radius: 10px 10px 0 0;
+}
+.team .persons .person .txt .icons i {
+  cursor: pointer;
+}
+/* end team  */
+
+/* start pricing  */
+.pricing {
+  background-color: #fcfcfc;
+}
+
+.pricing h1 span {
+  color: var(--main-color);
+  position: relative;
+}
+.pricing h1 span::before {
+  content: "____";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  color: rgb(196, 196, 250);
+}
+.pricing h1 .last::before {
+  left: 0;
+}
+.pricing .mode > div {
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+}
+.pricing .mode .month {
+  border-radius: 50px 0 0 50px;
+}
+.pricing .mode .year {
+  border-radius: 0 50px 50px 0;
+}
+.pricing .mode .active {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.pricing .cards .card {
+  background-color: #fbfbfb;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fefefe;
+}
+.pricing .cards .card h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.pricing .cards .card h3 i {
+  color: var(--main-color);
+}
+.pricing .cards .card p {
+  color: #a7a7a7;
+  border-bottom: 1px solid #a7a7a7;
+}
+.pricing .cards .card span {
+  color: var(--main-color);
+}
+.pricing .cards .card button {
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 50px;
+}
+
+.pricing .cards .card.active {
+  background-color: white;
+  z-index: 1;
+  box-shadow: 1px 1px 15px #a7a7a7;
+  border: none;
+}
+
+.pricing .cards .card.active button {
+  background-color: white;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+.pricing .cards .card.active button:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+
+/* end pricing */
+
+/* start subscribe */
+.sub {
+  background-color: black;
+  min-height: 150px;
+}
+.sub .left {
+  color: white;
+  font-size: 18px;
+}
+.sub .right form input {
+  border-radius: 40px;
+  border: none;
+}
+.sub .right form input:focus {
+  outline: none;
+}
+.sub .right form input.txt {
+  width: 60%;
+}
+.sub .right form input.submit {
+  background-color: blue;
+  color: white;
+}
+@media (max-width: 767px) {
+  .sub .container {
+    flex-direction: column;
+  }
+  .sub .container > div {
+    width: 100% !important;
+  }
+  .sub .container input {
+    margin-top: 10px;
+  }
+}
+/* end subscribe */
+
+/* start blog  */
+.blog {
+  background-color: #eee;
+}
+.blog h1 span {
+  color: var(--main-color);
+  position: relative;
+}
+.blog h1 span::before {
+  content: "____";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  color: rgb(196, 196, 250);
+}
+.blog h1 .last::before {
+  left: 0;
+}
+.blog .divs .div {
+  width: calc(90% / 3);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.blog .divs .div:hover {
+  transform: translateY(-20px);
+}
+
+@media (max-width: 991px) {
+  .blog .divs .div {
+    width: calc(90% / 2);
+  }
+}
+@media (max-width: 767px) {
+  .blog .divs .div {
+    width: 100%;
+  }
+}
+
+.blog .divs .div .img {
+  overflow: hidden;
+}
+.blog .divs .div .img img {
+  transition: 0.3s;
+}
+.blog .divs .div .img img:hover {
+  transform: scale(1.3) rotate(5deg);
+  opacity: 0.4;
+}
+
+.blog .divs .div .content .icons {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+.blog .divs .div:hover .icons {
+  background-color: var(--main-color);
+}
+.blog .divs .div .content .icons i {
+  cursor: pointer;
+}
+.blog .divs .div .content .txt h3 {
+  font-size: 18px;
+}
+.blog .divs .div .content .txt p {
+  color: gray;
+}
+.blog .divs .div .content .txt .line {
+  position: relative;
+}
+.blog .divs .div .content .txt .line::before {
+  content: "";
+  height: 1px;
+  width: 50px;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  background-color: var(--main-color);
+  z-index: 10;
+}
+.blog .divs .div .content .txt .readMore {
+  position: relative;
+  cursor: pointer;
+}
+.blog .divs .div .content .txt .readMore i {
+  transition: 0.3s;
+  position: absolute;
+  top: 3px;
+  left: 200px;
+  transition: 0.3s;
+}
+.blog .divs .div .content .txt .readMore:hover i {
+  animation: go-right 1s infinite;
+}
+/* end content  */
+
+/* start meet  */
+/* .blog {
+} */
+.meet h1 span {
+  color: var(--main-color);
+  position: relative;
+}
+.meet h1 span::before {
+  content: "____";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  color: rgb(196, 196, 250);
+}
+
+/* end meet  */
+
+/* start touch  */
+.touch h1 span {
+  color: var(--main-color);
+  position: relative;
+}
+.touch h1 span::before {
+  content: "____";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  color: rgb(196, 196, 250);
+}
+.touch h1 .last::before {
+  left: 0;
+}
+
+.touch .form > div {
+  color: #ccc;
+}
+.touch .form > div input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+}
+
+.touch .form > div input:focus {
+  outline: none;
+}
+.touch .form > div p {
+  color: red;
+  font-size: 12px;
+}
+.touch .form textarea {
+  height: 100px;
+  resize: none;
+  border: 2px solid #ccc;
+}
+.touch .form textarea:focus {
+  outline: none;
+}
+.touch .form button {
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 20px;
+}
+
+/* end touch  */
+
+/* start phone */
+.phone {
+  background-color: var(--main-color);
+  min-height: 130px;
+}
+.phone .txt {
+  color: white;
+  position: relative;
+}
+.phone .txt i {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  font-size: 70px;
+  color: gray;
+  opacity: 0.5;
+}
+
+.phone button {
+  background-color: white;
+  color: var(--main-color);
+  border: none;
+  border-radius: 50px;
+}
+@media (max-width: 767px) {
+  .phone .container {
+    flex-direction: column;
+  }
+}
+/* end phone */
+
+/* start footer  */
+.footer {
+  color: white;
+  background-color: black;
+}
+.footer .container > div > span {
+  color: var(--main-color);
+}
+.footer .posts .post.line {
+  border-bottom: 1px solid gray;
+}
+.footer .posts .post .txt {
+  font-size: 12px;
+}
+.footer .posts .post .txt .gray {
+  color: gray;
+}
+.footer .links .buttons button {
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+}
+.footer .links .buttons button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.footer > p {
+  color: var(--main-color);
+  cursor: pointer;
+}
+/* end footer  */
+
+/* start arrow  */
+.arrow {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow i {
+  margin-top: 25%;
+  transition: 0.5s;
+}
+.arrow:hover i {
+  animation: go-up 1s infinite;
+}
+/* end arrow  */
+/* start animation */
+@keyframes go-up {
+  0% {
+    margin-top: 25%;
+  }
+  50% {
+    margin-top: 15%;
+  }
+  100% {
+    margin-top: 35%;
+  }
+}
+@keyframes go-right {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: -10px;
+  }
+}
+/* end animation */
